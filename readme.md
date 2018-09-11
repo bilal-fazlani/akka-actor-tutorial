@@ -1,9 +1,9 @@
-# akka-actor-tutorial
+# Akka Actors Tutorial
 
-this repo contains multiple packages each package 
+This repo contains multiple packages each package 
 representing an example for a corresponding blog post.
 
-| package |blog post |
+| package | blog post |
 |---|---|
 | `I_hello` | [Hello, Actors](https://medium.com/akka-for-newbies/hello-akka-f0a908d4a859) | 
 | `II_supervisor_example` | [Communication between Actors](https://medium.com/akka-for-newbies/communication-between-actors-9770d9a10224) | 
