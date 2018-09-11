@@ -1,9 +1,13 @@
-package I_hello
+package IV_forward_example.actors
+
+import IV_forward_example.messages.{Hello, HelloResponse}
 import akka.actor.{Actor, Props}
 
 class GreetingsActor extends Actor {
+
   override def receive: Receive = {
-    case Hello(times) => println("Hello\n" * times)
+    case Hello(times) =>
+      sender ! HelloResponse("hello\n" * times)
     case _ => unhandled()
   }
 }
@@ -11,5 +15,3 @@ class GreetingsActor extends Actor {
 object GreetingsActor{
   def props = Props(classOf[GreetingsActor])
 }
-
-case class Hello(times: Int = 1)

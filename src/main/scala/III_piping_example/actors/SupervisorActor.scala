@@ -1,11 +1,12 @@
-package III_piping_example
+package III_piping_example.actors
 
+import III_piping_example.messages._
 import akka.actor.{Actor, ActorRef, Props}
-import akka.util.Timeout
 import akka.pattern.{ask, pipe}
-import scala.concurrent.ExecutionContext.Implicits.global
+import akka.util.Timeout
 
-import scala.concurrent.{Await, Future}
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
 import scala.concurrent.duration.DurationDouble
 
 class SupervisorActor extends Actor{
@@ -29,6 +30,3 @@ object SupervisorActor{
   def props = Props(classOf[SupervisorActor])
 }
 
-case class HelloResponse(text: String)
-case class Count()
-case class CountResponse(value:Int)

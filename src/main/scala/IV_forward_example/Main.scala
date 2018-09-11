@@ -1,5 +1,6 @@
 package IV_forward_example
 
+import IV_forward_example.actors.SupervisorActor
 import IV_forward_example.messages.{Count, Hello}
 import akka.actor.{ActorRef, ActorSystem, PoisonPill}
 
@@ -21,5 +22,5 @@ object Main extends App {
 
   supervisorActor ! PoisonPill
 
-  Await.result(actorSystem.terminate(), 20000 second)
+  Await.result(actorSystem.terminate(), 2 second)
 }

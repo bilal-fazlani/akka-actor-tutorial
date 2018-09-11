@@ -1,4 +1,5 @@
-package IV_forward_example
+package IV_forward_example.actors
+
 import IV_forward_example.messages.{Count, CountResponse, Hello}
 import akka.actor.{Actor, ActorRef, Props}
 

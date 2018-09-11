@@ -1,4 +1,6 @@
 package II_supervisor_example
+import II_supervisor_example.actors.SupervisorActor
+import II_supervisor_example.messages._
 import akka.actor.{ActorRef, ActorSystem, PoisonPill}
 
 import scala.concurrent.Await

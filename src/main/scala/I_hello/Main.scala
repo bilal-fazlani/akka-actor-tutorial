@@ -1,4 +1,6 @@
 package I_hello
+import I_hello.actors.GreetingsActor
+import I_hello.messages.Hello
 import akka.actor.{ActorRef, ActorSystem, PoisonPill}
 
 import scala.concurrent.Await

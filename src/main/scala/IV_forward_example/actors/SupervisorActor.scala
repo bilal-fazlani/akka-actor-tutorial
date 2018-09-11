@@ -1,10 +1,9 @@
-package IV_forward_example
+package IV_forward_example.actors
 
-import IV_forward_example.messages.{Count, CountResponse, Hello, HelloResponse}
+import IV_forward_example.messages._
 import akka.actor.{Actor, ActorRef, Props}
-import akka.pattern.pipe
+import akka.pattern.{ask, pipe}
 import akka.util.Timeout
-import akka.pattern.ask
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
@@ -18,7 +17,7 @@ class SupervisorActor extends Actor{
     case x: Hello => counter ! x
     case response: HelloResponse => println(response.text)
     case c: Count =>
-      implicit val timeout: Timeout = new Timeout(1000 second)
+      implicit val timeout: Timeout = new Timeout(1 second)
       val future: Future[Any] = counter ? c
       pipe(future) to self
     case countResponse: CountResponse =>

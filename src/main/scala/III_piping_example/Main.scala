@@ -1,5 +1,7 @@
 package III_piping_example
 
+import III_piping_example.actors.SupervisorActor
+import III_piping_example.messages._
 import akka.actor.{ActorRef, ActorSystem, PoisonPill}
 
 import scala.concurrent.Await

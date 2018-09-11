@@ -1,10 +1,12 @@
-package II_supervisor_example
-import akka.actor.{Actor, ActorRef, Props}
-import akka.util.Timeout
-import akka.pattern.ask
+package II_supervisor_example.actors
 
-import scala.concurrent.{Await, Future}
+import II_supervisor_example.messages._
+import akka.actor.{Actor, ActorRef, Props}
+import akka.pattern.ask
+import akka.util.Timeout
+
 import scala.concurrent.duration.DurationDouble
+import scala.concurrent.{Await, Future}
 
 class SupervisorActor extends Actor{
 
@@ -26,6 +28,3 @@ object SupervisorActor{
   def props = Props(classOf[SupervisorActor])
 }
 
-case class HelloResponse(text: String)
-case class Count()
-case class CountResponse(value:Int)
