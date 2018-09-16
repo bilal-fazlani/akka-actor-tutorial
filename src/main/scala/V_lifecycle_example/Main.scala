@@ -1,5 +1,6 @@
 package V_lifecycle_example
 
+import V_lifecycle_example.actors.LifecyclePrintActor
 import akka.actor.{ActorRef, ActorSystem, PoisonPill}
 
 import scala.concurrent.Await

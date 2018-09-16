@@ -1,4 +1,4 @@
-package V_lifecycle_example
+package V_lifecycle_example.actors
 
 import akka.actor.{Actor, Props}
 
@@ -9,7 +9,7 @@ class LifecyclePrintActor extends Actor{
   var messageCount = 0
   println(s"constructor. message count is $messageCount")
 
-  def println(value: Any): Unit =  Predef println ("-"*5 + value + "-"*5)
+  def println(value: Any): Unit =  Predef println s"${"-" * 5} $value"
 
   override def preStart(): Unit = println("preStart")
 

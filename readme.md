@@ -10,3 +10,4 @@ representing an example for a corresponding blog post.
 | `III_piping_example` | [Communication Patterns](https://medium.com/akka-for-newbies/communication-patterns-7c52294a998a) | 
 | `IV_forward_example` | [Communication Patterns](https://medium.com/akka-for-newbies/communication-patterns-7c52294a998a) | 
 | `V_lifecycle_example` | [Actor Lifecycle](https://medium.com/akka-for-newbies/actor-lifecycle-94b05bd2f600) | 
+| `VI_hotswapping_behavior` | [Hotswapping Behavior](https://medium.com/akka-for-newbies/hotswapping-behavior-b70ee8b7c181) |
